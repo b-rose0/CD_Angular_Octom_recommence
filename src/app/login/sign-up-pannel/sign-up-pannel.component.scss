@@ -1,0 +1,10 @@
+h1{
+    font-family: 'Poppins';
+    font-size:larger;
+    font-weight: bolder;
+
+    @media screen and (max-width:650px) {
+        margin-bottom: 1.2em;  
+        font-size: large;     
+    }
+}

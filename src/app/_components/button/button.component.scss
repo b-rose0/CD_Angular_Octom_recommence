@@ -1,0 +1,19 @@
+button {
+    height: 40px;
+    border-radius: 6px;
+    width: 100%;
+    padding: 4px;
+    border-width: 0px;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+
+    img {
+        padding-right: 8px;
+    }
+    
+    span {
+        //padding-top: 0.4em;
+    }
+}

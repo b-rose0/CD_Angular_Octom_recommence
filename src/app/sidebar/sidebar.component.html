@@ -1,0 +1,14 @@
+<div class="sidebar">
+
+    <div class="logo">
+        <img src="assets/images/logo_octom.png" alt="Octom">
+    </div>
+
+    <section class="menu">
+        <ul>
+            <li *ngFor="let item of menu" routerLink="/{{item}}">
+                <img src="assets/images/icon_{{item}}.png" [alt]=item>
+            </li>
+        </ul>
+    </section>
+</div>

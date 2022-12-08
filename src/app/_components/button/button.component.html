@@ -1,0 +1,6 @@
+<button (click)="clickEmitter.emit()" [style.color]="colorTextButton" 
+[style.background-color]="colorBackgroundButton" [style.font-weight]="fontWeight"
+[style.font-size]="fontSize" >
+        <img *ngIf="this.iconName" src="assets/images/{{iconName}}" [alt]="iconName">
+        <span [style.padding-top]="paddingTop">{{label}}</span>
+</button>

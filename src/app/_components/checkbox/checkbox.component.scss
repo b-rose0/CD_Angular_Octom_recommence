@@ -1,0 +1,41 @@
+div{
+    display: flex;
+    align-items: center;
+    margin-top: 0.2em;
+    font-size: small;
+
+    input[type=checkbox] {
+    
+        position: relative;
+        width: 40px;
+        height: 20px;
+        appearance: none;
+        outline: none;
+        background-color: #F2F2F2;
+        border: 1px solid #E5E5E5;
+        border-radius: 50px;
+        transition-duration: 200ms;
+    
+        &:after {
+            content: "";
+            position: absolute;
+            top: 1px;
+            width: 16px;
+            height: 16px;
+            background-color: white;
+            border-radius: 50%;
+        }
+    
+        &:checked {
+            border-color: #0077E4;
+            background-color: #007AFF;
+    
+            &:after {
+                left: 21px;
+            }
+        }
+    
+    
+    }
+}
+

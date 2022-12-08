@@ -1,0 +1,4 @@
+<div class="input">
+    <label>{{label}}</label>
+    <input [type]="typeOfInput" [name]="label" [placeholder]="placeHolder" #inputValue (change)="emitInput(inputValue.value)" required>
+</div>

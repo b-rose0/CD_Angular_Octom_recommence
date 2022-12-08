@@ -1,0 +1,29 @@
+.input{
+    margin-bottom: 0.8em;
+    letter-spacing: 0.3px;
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 4px;
+        height: 48px;
+        padding: 1em;
+        margin-top: 0.3em;
+        background-color: #F2F2F2;
+        border-color: #E5E5E5;
+    }
+
+
+
+    label {
+        font-size: smaller;
+        font-weight: lighter;
+        padding: 1.2em;
+
+        @media screen and (max-width:650px) {
+            display: none;
+        }
+    }
+}

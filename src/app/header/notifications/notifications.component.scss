@@ -1,0 +1,30 @@
+.notifications{
+    position: relative;
+    width: 1em;
+    height: 1em;
+    appearance: none;
+    outline: none;
+    background-color: black;
+    transition-duration: 200ms;
+    border-radius: 50%;
+    margin: 0.6em;
+    margin-right: 2em;
+
+    &::after {
+        padding: 2px;
+        content: "2";
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        font-size:x-small;
+        font-stretch: expanded;
+        line-height: 10px;
+        position: absolute;
+        top: -2px;
+        left: 12px;
+        width:  10px;
+        height: 10px;
+        background-color: #5150F9;
+        border-radius: 50%;
+    }
+}

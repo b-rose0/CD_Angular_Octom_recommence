@@ -1,0 +1,27 @@
+
+        <div class="sign_in">    
+
+            <div class="form">        
+                <h1>Nice to see you again</h1>
+                <app-input label="Login" placeHolder="Email or phone number" typeOfInput="text" (inputEmmitter)="setLogin($event)"></app-input>
+                <app-input label="Password" placeHolder="Enter password" typeOfInput="password" (inputEmmitter)="setPassword($event)"></app-input>
+                <div class="options">    
+                    <app-checkbox label="Remember me" (checkboxEmitter)="setRememberMe($event)"></app-checkbox>
+                    <a [routerLinkActive]="['active']" [routerLink]="['./forgetPassword']">Forget password?</a>
+                </div>
+            </div>
+            <div>
+                <app-button label="Sign in" colorBackgroundButton="#007AFF" (clickEmitter)="signIn()"></app-button>
+            </div>
+            <div class="nav"></div>
+            <div>
+                <app-button label="Or sign in with Google" iconName="icon_google.png" 
+                colorBackgroundButton="black" fontSize="smaller" 
+                (clickEmitter)="signInWithGoogle($event)"></app-button>
+            </div>
+        </div>
+        <div class="to_sign_up">
+            <p>Don't have an account?</p>
+            <p><a [routerLinkActive]="['active']" [routerLink]="['./signUp']">Sign up now</a></p>
+        </div>  
+    

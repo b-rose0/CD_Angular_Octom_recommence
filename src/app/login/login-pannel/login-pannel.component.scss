@@ -1,0 +1,71 @@
+
+.sign_in_pannel {    
+    padding: 3em;
+    font-size: smaller;
+    font-family: 'Roboto';
+
+    @media screen and (max-width:650px) {
+        padding: 1.4em;
+    }
+    
+
+
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    @media screen and (max-height:780px) {
+        height: 85vh;
+    }
+
+    .sign_in_and_logo {
+        flex: 2 1 auto;   
+        display: flex;
+        flex-direction: column; 
+
+        
+        .logo{
+            display: flex;
+            align-items: center;
+            font-size: larger;
+            font-family: 'Poppins';
+            font-weight: bold;
+            margin-bottom: 0.6em;
+
+            div{
+                margin-left: 0.5em;
+            }
+
+            @media screen and (max-width:650px) {
+                margin-top: auto;
+                margin-bottom: auto;
+                order: 2;
+                justify-content: center;
+            }
+        }
+
+
+        
+
+    }
+
+    .bottom_pannel {
+        margin-top: auto;
+        margin-bottom: 4em;
+        @media screen and (max-width:650px) {
+            margin-bottom: 0;
+        }
+
+    }
+
+ 
+}
+
+
+
+
+
+
+    
+
+
+
