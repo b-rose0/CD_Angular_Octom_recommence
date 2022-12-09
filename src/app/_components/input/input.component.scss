@@ -26,4 +26,19 @@
             display: none;
         }
     }
+
+    .toggleVisibility {
+        position: relative;
+        top: -2.3em;
+        left: 88%;
+        margin: 0;
+        padding: 0;
+        display: block;
+        height: 0px;
+
+        @media screen and (max-width:650px) {
+            left: 92%;
+        }
+    
+    }
 }
