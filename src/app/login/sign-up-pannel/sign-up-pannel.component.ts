@@ -27,7 +27,7 @@ export class SignUpPannelComponent {
       if(this.password == this.passwordConfirmation) {
         console.log("Attention l'utilisateur "+this.login+" n'a pas été enregistré avec "
         +this.password+" et terms of use est à "+this.termsOfUseAccepted);
-        this.router.navigateByUrl("/messenger");
+        this.router.navigateByUrl("/octom");
       } else {
         console.log("Le mot de passe n'est pas le même.");
 

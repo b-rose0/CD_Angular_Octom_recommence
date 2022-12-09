@@ -4,6 +4,7 @@ import { ForgetPasswordPannelComponent } from './login/forget-password-pannel/fo
 import { LoginComponent } from './login/login.component';
 import { SignInFormComponent } from './login/sign-in-form/sign-in-form.component';
 import { SignUpPannelComponent } from './login/sign-up-pannel/sign-up-pannel.component';
+import { PagesComponent } from './pages/pages.component';
 import { ActivityComponent } from './_pages/activity/activity.component';
 import { DashboardComponent } from './_pages/dashboard/dashboard.component';
 import { EbooksComponent } from './_pages/ebooks/ebooks.component';
@@ -12,7 +13,9 @@ import { MessengerComponent } from './_pages/messenger/messenger.component';
 import { SettingsComponent } from './_pages/settings/settings.component';
 
 const routes: Routes = [
-  { path: 'dashboard', 
+  {path: 'octom', component :  PagesComponent, 
+   children: [
+    { path: 'dashboard', 
     component: DashboardComponent },
   { path: 'activity', 
     component: ActivityComponent },
@@ -24,6 +27,10 @@ const routes: Routes = [
     component: MessengerComponent },
   { path: 'settings', 
     component: SettingsComponent },
+  { path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full'}
+   ]},
   { path: '',
     redirectTo: 'login',
     pathMatch: 'full' },

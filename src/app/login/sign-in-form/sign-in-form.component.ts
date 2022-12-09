@@ -17,7 +17,7 @@ export class SignInFormComponent {
     if(this.login != "" && this.password != ""){
       console.log("Attention l'utilisateur "+this.login+" n'a pas été connecté avec "
       +this.password+" et remember me est à "+this.rememberMe);
-      this.router.navigateByUrl("/messenger");
+      this.router.navigateByUrl("/octom");
     } else {
       console.log("Il manque des informations");
     }
@@ -25,7 +25,7 @@ export class SignInFormComponent {
 
   signInWithGoogle(x:boolean) {
     console.log("Attention l'utilisateur n'a pas été connecté avec Google");
-    this.router.navigateByUrl("/messenger");
+    this.router.navigateByUrl("/octom");
     //throw new Error('Method not implemented.');
   }
 

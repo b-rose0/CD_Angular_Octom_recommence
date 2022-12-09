@@ -21,6 +21,7 @@ import { EbooksComponent } from './_pages/ebooks/ebooks.component';
 import { FilesComponent } from './_pages/files/files.component';
 import { MessengerComponent } from './_pages/messenger/messenger.component';
 import { SettingsComponent } from './_pages/settings/settings.component';
+import { PagesComponent } from './pages/pages.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SettingsComponent } from './_pages/settings/settings.component';
     EbooksComponent,
     FilesComponent,
     MessengerComponent,
-    SettingsComponent
+    SettingsComponent,
+    PagesComponent
   ],
   imports: [
     BrowserModule,

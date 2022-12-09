@@ -12,10 +12,10 @@
 
     display: flex;
     flex-direction: column;
-    height: 90vh;
-    @media screen and (max-height:780px) {
+    height: 95vh;
+    /*@media screen and (max-height:780px) {
         height: 85vh;
-    }
+    }*/
 
     .sign_in_and_logo {
         flex: 2 1 auto;   

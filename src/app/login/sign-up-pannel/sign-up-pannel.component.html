@@ -1,10 +1,11 @@
 <div class="sign_up_pannel">
-    <h1>Welcome !</h1>
-    <div><app-input label="Username" placeHolder="Enter your username" typeOfInput="text" (inputEmmitter)="setUserName($event)"></app-input></div>
-    <div><app-input label="Login" placeHolder="Email or phone number" typeOfInput="text" (inputEmmitter)="setLogin($event)"></app-input></div>
-    <div><app-input label="Password" placeHolder="Enter your password" typeOfInput="password" (inputEmmitter)="setPassword($event)"></app-input></div>
-    <div><app-input label="Password confirmation" placeHolder="Confirm your password" typeOfInput="password" (inputEmmitter)="setPasswordConfirmation($event)"></app-input></div>
-    <div><app-checkbox label="I accept the Terms of Use & Privacy Policy" (checkboxEmitter)="settermsOfUseAccepted($event)"></app-checkbox></div>
-    <div><app-button label="Continue" colorBackgroundButton="#007AFF" (clickEmitter)="signUp()"></app-button></div>
-
+    <form>
+        <h1>Welcome !</h1>
+        <div><app-input label="Username" placeHolder="Enter your username" typeOfInput="text" (inputEmmitter)="setUserName($event)"></app-input></div>
+        <div><app-input label="Login" placeHolder="Email or phone number" typeOfInput="text" (inputEmmitter)="setLogin($event)"></app-input></div>
+        <div><app-input label="Password" placeHolder="Enter your password" typeOfInput="password" (inputEmmitter)="setPassword($event)"></app-input></div>
+        <div><app-input label="Password confirmation" placeHolder="Confirm your password" typeOfInput="password" (inputEmmitter)="setPasswordConfirmation($event)"></app-input></div>
+        <div><app-checkbox label="I accept the Terms of Use & Privacy Policy" (checkboxEmitter)="settermsOfUseAccepted($event)"></app-checkbox></div>
+        <div><app-button label="Continue" colorBackgroundButton="#007AFF" (clickEmitter)="signUp()"></app-button></div>
+    </form>
 </div>

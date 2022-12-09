@@ -12,7 +12,7 @@ export class LoginPannelComponent {
 
   signUp() {
   console.log("Attention l'utilisateur n'a pas été enregistré");
-  this.router.navigateByUrl("/messenger");
-}
+  this.router.navigateByUrl("/octom");
+ }
 
 }
