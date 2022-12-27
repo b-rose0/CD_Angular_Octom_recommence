@@ -10,9 +10,8 @@
     margin: 0.6em;
     margin-right: 2em;
 
-    &::after {
+    .number_notifications {
         padding: 2px;
-        content: "2";
         color: white;
         text-align: center;
         font-weight: 600;

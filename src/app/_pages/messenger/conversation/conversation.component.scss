@@ -1,0 +1,15 @@
+.content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .conversation {
+        flex: 3 1 auto;
+        background-color: green;
+    }
+
+    .conversationDetails {
+        flex: 2 1 auto;
+        background-color: brown;
+    }
+}

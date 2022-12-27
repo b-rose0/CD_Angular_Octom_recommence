@@ -22,6 +22,9 @@ import { FilesComponent } from './_pages/files/files.component';
 import { MessengerComponent } from './_pages/messenger/messenger.component';
 import { SettingsComponent } from './_pages/settings/settings.component';
 import { PagesComponent } from './pages/pages.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ConversationInfosComponent } from './_pages/messenger/conversation-infos/conversation-infos.component';
+import { ConversationComponent } from './_pages/messenger/conversation/conversation.component';
 
 @NgModule({
   declarations: [
@@ -44,11 +47,14 @@ import { PagesComponent } from './pages/pages.component';
     FilesComponent,
     MessengerComponent,
     SettingsComponent,
-    PagesComponent
+    PagesComponent,
+    ConversationInfosComponent,
+    ConversationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

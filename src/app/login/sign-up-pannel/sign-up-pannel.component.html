@@ -1,5 +1,5 @@
 <div class="sign_up_pannel">
-    <form>
+<!--    <form>
         <h1>Welcome !</h1>
         <div><app-input label="Username" placeHolder="Enter your username" typeOfInput="text" (inputEmmitter)="setUserName($event)"></app-input></div>
         <div><app-input label="Login" placeHolder="Email or phone number" typeOfInput="text" (inputEmmitter)="setLogin($event)"></app-input></div>
@@ -7,5 +7,94 @@
         <div><app-input label="Password confirmation" placeHolder="Confirm your password" typeOfInput="password" (inputEmmitter)="setPasswordConfirmation($event)"></app-input></div>
         <div><app-checkbox label="I accept the Terms of Use & Privacy Policy" (checkboxEmitter)="settermsOfUseAccepted($event)"></app-checkbox></div>
         <div><app-button label="Continue" colorBackgroundButton="#007AFF" (clickEmitter)="signUp()"></app-button></div>
+    </form> -->
+    <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+        <h1>Welcome !</h1>
+        <h2>Login's informations</h2>
+        <div class="input">
+            <label>Username</label>
+            <input formControlName="username" type="text" placeholder="Enter your username">
+            <div class="error" *ngIf="username?.touched && username?.errors">
+                <span *ngIf="username?.errors!['required']">
+                    Username is required
+                </span>
+                <span *ngIf="username?.errors!['minlength']">
+                    Username must have at least 3 characters
+                </span>
+                <span *ngIf="username?.errors!['maxlength']">
+                    Username must have no more than 32 characters
+                </span>
+            </div>
+
+            <label>Login</label>
+            <input formControlName="login" type="text" placeholder="Email or phone number">
+            <div class="error" *ngIf="login?.touched && login?.errors">
+                <span *ngIf="login?.errors!['required']">
+                    Login is required
+                </span>
+                <span *ngIf="login?.errors!['login']">
+                    {{login?.errors!['login']}} isn't an email or a tel number valid
+                </span>
+            </div>
+
+            <div formGroupName="passwordGroup">
+                <label>Password</label>
+                <input formControlName="password" type="password" placeholder="Enter your password">
+                <div class="error" *ngIf="password?.touched && password?.errors">
+                    <span *ngIf="password?.errors!['required']">
+                        Password is required
+                    </span>
+                    <span *ngIf="password?.errors!['minlength']">
+                        Password must have at least 8 characters
+                    </span>
+                    <span *ngIf="password?.errors!['maxlength']">
+                        Password must have no more than 32 characters
+                    </span>
+                </div>
+
+                <label>Password confirmation</label>
+                <input formControlName="passwordConfirmation" type="password" placeholder="Confirm your password">
+                <div class="error" *ngIf="passwordConfirmation?.touched && passwordConfirmation?.errors">
+                    <span *ngIf="passwordConfirmation?.errors!['required']">
+                        Confirm your password
+                    </span>
+                </div>
+                <div class="error" *ngIf="passwordConfirmation?.touched && passwordGroup?.errors">
+                    <span >
+                        The two password are differents
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <p><input formControlName="termsAndPrivacy" type="checkbox">I agree with the <a href="#">Terms & privacy</a></p>
+        <div class="error" *ngIf="termsAndPrivacy?.touched && termsAndPrivacy?.errors">
+            You need to agree to the terms ans privacy to sign up.
+        </div>
+
+        <h2>Autres</h2>
+        <!--Num de téléphones FormArray-->
+        <div formArrayName="phones">
+                <ng-container *ngFor="let phone of phones.controls; let i=index" [formGroupName]="i">
+                    <div class="phone-input">
+                        <select formControlName="phonePrefix">
+                            <option selected hidden value="">Code</option>
+                            <option value="66">+98</option>
+                            <option value="66">+99</option>
+                            <option value="66">+90</option>
+                            <option value="66">+66</option>
+                        </select>
+                        <input type="phone" name="phone" formControlName="phoneNumber" placeholder="0512121212">
+                        <input type="button" name="removePhone" (click)="deletePhone(i)" value="X">
+                    </div>
+                    <div class="error" *ngIf="getPhoneNumber(i)?.touched && getPhoneNumber(i)?.errors">
+                        Phone number invalid
+                    </div>
+                </ng-container>
+                <div (click)="addPhone()" *ngIf="phones?.length! < 3">+ Add Phone number</div>
+                <div class="error" *ngIf="phones?.length == 3">You can only add up to 3 phone number</div>
+        </div>
+        <div class="error" *ngFor="let error of errors.values()">{{error}}</div>
+        <button type="submit">Sign up</button>
     </form>
 </div>

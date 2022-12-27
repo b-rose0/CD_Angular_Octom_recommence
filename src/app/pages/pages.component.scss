@@ -1,6 +1,7 @@
 
 .container {
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     display: flex;
 
     .main {
@@ -11,7 +12,12 @@
         .content{
             flex: 1;
             overflow: hidden;
+            margin-top: 0.03em;
         }
+    }
+
+    .sidebar {
+        margin: 2.08em;
     }
 
 }

@@ -8,3 +8,77 @@ h1{
         font-size: large;     
     }
 }
+
+h2{
+    font-family: 'Poppins';
+    font-size:small;
+    font-weight: bolder;
+
+    @media screen and (max-width:650px) {
+        margin-bottom: 1em;   
+    }
+}
+
+.input{
+    margin-bottom: 0.8em;
+    letter-spacing: 0.3px;
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 4px;
+        height: 48px;
+        padding: 1em;
+        margin-top: 0.3em;
+        background-color: #F2F2F2;
+        border-color: #E5E5E5;
+    }
+
+
+
+    label {
+        font-size: smaller;
+        font-weight: lighter;
+        padding: 1.2em;
+
+        @media screen and (max-width:650px) {
+            display: none;
+        }
+    }
+
+    .toggleVisibility {
+        position: relative;
+        top: -2.3em;
+        left: 88%;
+        margin: 0;
+        padding: 0;
+        display: block;
+        height: 0px;
+
+        @media screen and (max-width:650px) {
+            left: 92%;
+        }
+    
+    }
+}
+
+.error {
+    font-size: smaller;
+    color: red;
+    margin: 1em;
+    margin-top: 0.5em;
+}
+
+button {
+    width: 100%;
+    margin-top: 2em;
+}
+
+.phone-input {
+    display: flex;
+    input {
+        flex: 1;
+    }
+}
